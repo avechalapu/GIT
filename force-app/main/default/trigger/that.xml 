@@ -1,0 +1,28 @@
+
+<trigger>
+  <name>ExitFormTrigger</name>
+  <event>onClick</event>
+  <target>exitButton</target>
+  <action>
+    <name>exitFormAction</name>
+    <type>function</type>
+    <function>
+      <![CDATA[
+        function exitForm() {
+          if (confirm("Are you sure you want to exit?")) {
+            saveData();
+            closeForm();
+          }
+        }
+        
+        function saveData() {
+          // Save any unsaved data here
+        }
+        
+        function closeForm() {
+          // Close the form and clean up any residual processes
+        }
+      ]]>
+    </function>
+  </action>
+</trigger>
